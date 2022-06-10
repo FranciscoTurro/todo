@@ -5,32 +5,19 @@ const list = document.getElementById("list");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(); //cancels the event, meaning that the page wont reset every time i press the submit button
-  const newTodo = document.createElement("li");
-  list.append(newTodo);
-  newTodo.textContent = input.value;
-  input.value = "";
-  newTodo.addEventListener("contextmenu", (x) => {
-    x.preventDefault(); //stops normal right click functions from appearing
-    newTodo.remove();
-  });
+  addTodo();
 });
 
-function createTodo() {
+function addTodo() {
   const newTodo = document.createElement("li");
   list.append(newTodo);
   newTodo.textContent = input.value;
   input.value = "";
-}
-
-function createTODO() {
-  //this one uses an array, just in case i need it
-  const newTodo = document.createElement("li");
-  list.append(newTodo);
-  const todos = [];
-  todos.push(input.value);
-  todos.forEach((todo) => {
-    newTodo.textContent = todo;
-    console.log(todo);
+  newTodo.addEventListener("contextmenu", (e) => {
+    e.preventDefault(); //stops normal right click functions from appearing
+    newTodo.remove();
   });
-  input.value = "";
+  newTodo.addEventListener("click", (e) => {
+    newTodo.classList.toggle("done");
+  });
 }
