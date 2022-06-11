@@ -9,6 +9,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function addTodo() {
+  if (input.value.length == 0) return;
   const newTodo = document.createElement("li");
   list.append(newTodo);
   newTodo.textContent = input.value;

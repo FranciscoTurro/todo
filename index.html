@@ -8,13 +8,18 @@
     <title>To-do master</title>
   </head>
   <body>
-    <div id="big">
+    <div class="flex-container">
       <h1>todos</h1>
       <form id="formID">
-        <input type="text" id="input" />
-        <button type="submit">Submit. Or use enter like a human</button>
+        <input type="text" id="input" autocomplete="off" />
+        <!-- <button type="submit">Submit. Or die.</button> -->
+        <ul id="list"></ul>
       </form>
-      <ul id="list"></ul>
+      <small
+        >Right click to check off a todo. <br />
+        Left click to erase it from the list. <br />
+        After typing your to do, press enter.</small
+      >
     </div>
   </body>
 </html>

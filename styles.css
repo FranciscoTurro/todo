@@ -1,11 +1,49 @@
-#big {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-  /* outline: 2px solid red; */
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; /*good practice, still dont know why */
+}
+
+h1 {
+  font-size: 10em;
+  color: #ff10f0;
 }
 
 .done {
   text-decoration: line-through;
+  color: rgb(120, 168, 111);
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input {
+  font-size: 2rem;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+#list {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+
+li {
+  padding: 3px;
+}
+
+small {
+  padding-top: 25px;
+  color: rgba(121, 121, 121, 0.8);
 }
